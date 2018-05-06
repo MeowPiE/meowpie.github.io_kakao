@@ -1,0 +1,15 @@
+<li class="post-item post {{ post.post_class }}">
+  <a href="{{ post.url }}">
+    <h3 class="post-title">{{ post.title }}</h3>
+    <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 75 }}</p>
+  </a>
+  <div class="post-meta">
+    <a href="/about">
+      <div class="author-image" style="background-image:url(/assets/img/author.png);">
+        <span class="sr-only">{{ site.author }}'s image</span>
+      </div>
+      <p class="author-name">{{ site.author }}</p>
+    </a>
+    <p class="post-date">{{ post.date | date: '%Y-%m-%d %H:%M' }}</p>
+  </div>
+</li>

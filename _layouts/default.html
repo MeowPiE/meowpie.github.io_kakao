@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% include meta.html %}
+
+  <link href="/assets/css/normalize.css" rel="stylesheet" type="text/css" />
+  <link href="/assets/css/monokai.css" rel="stylesheet" type="text/css" />
+  <link href="/assets/css/magnific-popup.min.css" rel="stylesheet" type="text/css" />
+  <link href="/assets/fonts/Kakao.css" rel="stylesheet" type="text/css" />
+  <link href="/assets/css/screen.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="{{ page.layout | append: '-template' }}">
+  {% include header.html %}
+
+  <div id="wrapper">
+    {{ content }}
+    <div class="clearfix"></div>
+  </div>
+
+  {% include footer.html %}
+
+  <script src="/assets/js/jquery.min.js"></script>
+  <script src="/assets/js/jquery.magnific-popup.min.js"></script>
+  <script src="/assets/js/index.js"></script>
+</body>
+</html>

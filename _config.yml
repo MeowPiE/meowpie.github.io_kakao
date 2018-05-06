@@ -1,0 +1,29 @@
+title: 파이 랜드
+author: MeowPiE
+email: email@meowpie.kr
+description: |
+  IT 세상에서 빛나는
+  냥파이의 끄적끄적 정보상자
+url: https://www.meowpie.kr
+timezone: Asia/Seoul
+image: /assets/img/logo.png
+
+permalink: /:title/
+paginate: 5
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+
+collections:
+  authors:
+    output: true
+    permalink: /authors/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post

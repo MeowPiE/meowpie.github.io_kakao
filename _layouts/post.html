@@ -1,0 +1,54 @@
+---
+layout: default
+---
+
+<div id="navbar" class="container">
+  <h5><a id="link-back" href="/">Back to Posts</a></h5>
+</div>
+
+<div id="cover" class="container" {% if page.image %}style="background-image: url({{ page.image }});"{% endif %}>
+  <div>
+    <h1>{{ page.title }}</h1>
+  </div>
+</div>
+
+<div id="content" class="container post" role="main">
+  <div id="post-content">
+    {{ content }}
+  </div>
+  {% include disqus.html %}
+  <div id="post-footer">
+    <a id="post-author" href="/about">
+      <div id="author-image" style="background-image:url(/assets/img/author.png);">
+        <span class="sr-only">{{ site.author }}'s image</span>
+      </div>
+      <p id="author-name">{{ site.author }}</p>
+    </a>
+    <p id="post-date">{{ page.date | date: '%Y-%m-%d %H:%M' }}</p>
+  </div>
+</div>
+
+<div id="post-links" class="container">
+  {% if page.previous %}
+    <div id="post-prev" {% if page.previous.image %}style="background-image: url({{ page.previous.image }});"{% endif %}>
+      <div>
+        <h3><a href="{{ page.previous.url }}">{{ page.previous.title }}</a></h3>
+        <p>PREVIOUS POST</p>
+      </div>
+    </div>
+  {% endif %}
+  {% if page.next %}
+    <div id="post-next" {% if page.next.image %}style="background-image: url({{ page.next.image }});"{% endif %}>
+      <div>
+        <h3><a href="{{ page.next.url }}">{{ page.next.title }}</a></h3>
+        <p>NEXT POST</p>
+      </div>
+    </div>
+  {% endif %}
+</div>
+
+<div id="lightbox">
+  <div id="lightbox-image"></div>
+</div>
+
+<script id="dsq-count-scr" src="//pie-land.disqus.com/count.js" async></script>
