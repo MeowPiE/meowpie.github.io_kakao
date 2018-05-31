@@ -1,12 +1,10 @@
-title: 파이 랜드
+title: 냥파 랜드
 author: MeowPiE
 email: email@meowpie.kr
-description: |
-  IT 세상에서 빛나는
-  냥파이의 끄적끄적 정보상자
+description: 빛나는 냥파이의 정보 나라
 url: https://blog.meowpie.kr
 timezone: Asia/Seoul
-image: /assets/img/logo.png
+image: # put blog logo image
 
 permalink: /:title/
 paginate: 5
@@ -15,11 +13,6 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-feed
-
-collections:
-  authors:
-    output: true
-    permalink: /authors/:path/
 
 defaults:
   - scope:
